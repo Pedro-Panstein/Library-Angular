@@ -13,12 +13,11 @@ export class LoginComponent {
 
   login() {
     const regex = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~°ªº§¢£¬¨´´®¥©×÷±]/;
+    this.characterLimit();
 
     if (this.userName == null || this.userName == '') {
       this.error();
     } else if (regex.test(this.userName)) {
-      this.error();
-    } else if (this.userName.length > 35) {
       this.error();
     } else {
       sessionStorage.setItem('user', this.userName);
@@ -36,5 +35,15 @@ export class LoginComponent {
       input?.classList.remove('input-error');
       errorMessage?.classList.add('hidden');
     }, 3000);
+  }
+
+  characterLimit() {
+    const errorP = document.querySelector('.error-message p');
+    if (this.userName.length > 35) {
+      this.error();
+      if (errorP) {
+        errorP.textContent = 'Limite de 35 caracteres atingido';
+      }
+    }
   }
 }
