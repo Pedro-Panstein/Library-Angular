@@ -100,7 +100,118 @@ section {
   display: none;
 }
 
-.input-error, .input-error::placeholder {
+.input-error,
+.input-error::placeholder {
   border-color: var(--red) !important;
   color: var(--red) !important;
+}
+
+@media screen and (max-width: 1565px) {
+  section {
+    background-image: none;
+    background-color: #ededed;
+    .left-login {
+      background-color: var(--blue);
+      width: 50%;
+      margin-left: 0px;
+      img {
+        height: 250px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    .rigth-login {
+      right: 0px;
+      z-index: 20;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1118px) {
+  section {
+    .left-login {
+      width: 40%;
+      margin-left: 0px;
+      img {
+        height: 200px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .rigth-login {
+      right: 0px;
+      z-index: 20;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  section {
+    flex-direction: column;
+    align-items: center; // Adicione esta linha para centralizar horizontalmente
+    .left-login {
+      background-color: transparent;
+      height: 600px;
+      margin: 0px;
+      padding: 0;
+      width: 100%;
+      img {
+        height: 200px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+    .rigth-login {
+      position: relative; // Altere de absolute para relative
+      top: unset; // Remova top e right
+      right: unset;
+      width: 100%; // Altere a largura para ocupar o espaço disponível
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Centralize os itens dentro do container
+      h1 {
+        top: -200px;
+        right: unset;
+        position: relative;
+        font-size: 3rem;
+        text-align: center; // Centralize o texto
+      }
+      .login {
+        position: relative;
+        right: unset;
+        top: -100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Centralize os campos de login
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 418px) {
+  section {
+    .left-login {
+      img {
+        height: 100px;
+      }
+    }
+    .rigth-login {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .login {
+        .input-container {
+          input {
+            width: 280px;
+          }
+        }
+      }
+    }
+  }
 }
