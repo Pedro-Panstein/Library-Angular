@@ -1,0 +1,16 @@
+.primary-button {
+    width: 120px;
+    padding: 15px;
+    border-radius: var(--radio);
+    border: 2px solid #EDEDED;
+    background-color: var(--blue);
+    color: #EDEDED;
+    font-size: var(--font-size);
+    font-weight: 500;
+    opacity: .8;
+    transition: .2s linear all;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+}

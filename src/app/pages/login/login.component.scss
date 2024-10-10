@@ -1,0 +1,90 @@
+section {
+  background-image: url(../../../assets/login\ background.png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+
+  .left-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+    user-select: none;
+
+    h1 {
+      background: linear-gradient(90deg, #1e5dd7, #03aded);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-left: 20px;
+    }
+  }
+
+  .rigth-login {
+    position: absolute;
+    right: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h1 {
+      position: absolute;
+      top: 150px;
+      right: 180px;
+      font-size: 5rem;
+      color: var(--blue);
+    }
+
+    .login {
+      position: absolute;
+      right: 125px;
+      text-align: center;
+      font-weight: 500;
+      label {
+        white-space: nowrap;
+        font-size: 1.5rem;
+        color: var(--blue);
+      }
+      input {
+        margin: 10px 0px 10px 0px;
+        outline: none;
+        color: var(--blue);
+        font-size: var(--font-size);
+        font-weight: 500;
+        padding: 18px;
+        width: 350px;
+        border-radius: var(--radio);
+        border: 2px solid var(--blue);
+        box-shadow: inset 0px 0px 5px var(--blue);
+        background-color: #EDEDED;
+        transition: 0.2s linear all;
+        position: relative;
+        &:focus {
+          background-color: #f1f1f1;
+          box-shadow: inset 0px 0px 2px var(--blue);
+        }
+      }
+      img {
+        position: absolute;
+        background-color: var(--blue);
+        height: 65px;
+        width: 70px;
+        right: 0px;
+        top: 2.85rem;
+        border-top-right-radius: var(--radio);
+        border-bottom-right-radius: var(--radio);
+        padding: 15px;
+        cursor: pointer;
+        opacity: .9;
+        transition: .2s linear all;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
