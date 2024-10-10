@@ -7,9 +7,13 @@
     <h1>LOGIN</h1>
     <div class="login">
         <label for="username">Enter your name</label>
-        <input type="text" id="input-username" placeholder="Your name">
-        <!-- <input [(ngModel)]="userName" [ngModelOptions]="{standalone: true}" class="input-form" type="text" placeholder="Digite seu nome" > -->
-        <img src="../../../assets/arrow-login.png" alt="Login">
+        <div class="input-container">
+          <input [(ngModel)]="userName" (keydown.enter)="login()" type="text" id="input-username" placeholder="Your name">
+        <img src="../../../assets/arrow-login.png" (click)="login()" alt="Login">
+        </div>
+        <div class="error-message hidden">
+          <p>Digite um nome válido</p>
+        </div>
     </div>
   </div>
 </section>
