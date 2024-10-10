@@ -1,0 +1,41 @@
+header {
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  img {
+    width: 100px;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    li {
+      margin-left: 20px;
+      transition: .2s linear all;
+      a {
+        text-decoration: none;
+        color: var(--white);
+        font-size: var(--font-size);
+        font-weight: 500;
+        &:hover {
+          color: #bbc3dd;
+        }
+      }
+      .add{
+        color: var(--green);
+        &:hover {
+            color: #7adb75;
+        }
+      }
+      .remove {
+        color: var(--red);
+        &:hover {
+          color: #eb5076;
+        }
+      }
+    }
+  }
+}
