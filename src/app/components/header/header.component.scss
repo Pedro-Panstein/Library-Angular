@@ -14,7 +14,7 @@ header {
     gap: 20px;
     li {
       margin-left: 20px;
-      transition: .2s linear all;
+      transition: 0.2s linear all;
       a {
         text-decoration: none;
         color: var(--white);
@@ -24,10 +24,10 @@ header {
           color: #bbc3dd;
         }
       }
-      .add{
+      .add {
         color: var(--green);
         &:hover {
-            color: #7adb75;
+          color: #7adb75;
         }
       }
       .remove {
