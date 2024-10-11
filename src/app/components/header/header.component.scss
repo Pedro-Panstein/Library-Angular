@@ -39,3 +39,19 @@ header {
     }
   }
 }
+
+app-menu-bar {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  app-menu-bar {
+    display: flex;
+  }
+
+  header {
+    ul {
+      display: none;
+    }
+  }
+}

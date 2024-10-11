@@ -9,6 +9,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+//Angular material
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,11 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatIconModule,
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

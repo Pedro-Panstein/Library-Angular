@@ -21,6 +21,8 @@ export class LoginComponent {
       this.characterLimit();
     } else if (regex.test(this.userName)) {
       this.error();
+    } else if (this.userName.length <= 2) {
+      this.minimumCharacter();
     } else {
       sessionStorage.setItem('user', this.userName);
       this.rota.navigate(['home']);
@@ -51,6 +53,14 @@ export class LoginComponent {
     const errorP = document.querySelector('.error-message p');
     if (errorP) {
       errorP.textContent = 'Digite um nome inválido';
+    }
+  }
+
+  minimumCharacter() {
+    const errorP = document.querySelector('.error-message p');
+    this.error();
+    if (errorP) {
+      errorP.textContent = 'Mínimo de 3 caracteres';
     }
   }
 }

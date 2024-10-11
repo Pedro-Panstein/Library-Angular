@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MenuBarComponent {
 
+  openSidebar() {
+    const sidebarContent = document.querySelector(".sidebar-content");
+    const menuBar = document.querySelector(".menu-bar");
+    sidebarContent?.classList.toggle("hidden");   
+    menuBar?.classList.toggle("close");
+  }
 }

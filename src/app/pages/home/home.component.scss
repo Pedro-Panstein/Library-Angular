@@ -1,0 +1,42 @@
+main {
+  padding: 50px 100px;
+  .title-and-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .filter {
+      position: relative;
+      display: flex;
+      align-items: center;
+      input {
+        background-color: var(--gray);
+        width: 400px;
+        border: none;
+        padding: 15px 15px 15px 60px;
+        outline: none;
+        border-radius: var(--radio);
+        color: #fff;
+        font-size: var(--font-size);
+        opacity: .8;
+        transition: .2s linear all;
+        &::placeholder {
+          color: #fff;
+        }
+        &:focus {
+            opacity: 1;
+        }
+      }
+      span {
+        -webkit-user-select: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        color: #fff;
+        border-right: 2px solid #fff;
+        font-size: 30px;
+        z-index: 20;
+        padding: 10px;
+      }
+    }
+  }
+}

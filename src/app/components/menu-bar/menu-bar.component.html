@@ -1,6 +1,16 @@
-<div class="menu-bar">
-    <p>oi</p>
-    <span></span>
-    <span></span>
-    <span></span>
+<div (click)="openSidebar()" class="menu-bar">
+    <p class="line1"></p>
+    <p class="line2"></p>
+    <p class="line3"></p>
 </div>
+
+<section class="sidebar-content hidden">
+    <div class="sidebar">
+        <ul>
+            <li><a id="add">Add</a></li>
+            <li><a id="remove">Remove</a></li>
+            <li routerLink="/home"><a >Home</a></li>
+            <li routerLink="/settings"><a>Settings</a></li>
+        </ul>
+    </div>
+</section>
