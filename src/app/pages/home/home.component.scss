@@ -45,3 +45,84 @@ main {
     }
   }
 }
+
+.books-content {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  perspective: 1000px;
+  .book {
+    width: 320px;
+    height: 450px;
+    transition: 0.2s linear all;
+    img {
+      height: 240px;
+      width: 100%;
+      border-radius: var(--radio);
+    }
+    h3 {
+      margin-top: 10px;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: calc(var(--font-size) + 3px);
+      span {
+        font-weight: 500;
+      }
+    }
+    p {
+      margin-top: 15px;
+      text-align: justify;
+    }
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+}
+
+@media screen and (max-width: 1148px) {
+  main {
+    .title-and-filter {
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        text-align: center;
+      }
+      .filter {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    padding: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    .title-and-filter {
+      .filter {
+        input {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  main {
+    .title-and-filter {
+      .filter {
+        input {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
