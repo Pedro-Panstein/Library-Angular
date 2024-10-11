@@ -12,6 +12,7 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 //Angular material
 import { MatIconModule } from '@angular/material/icon';
+import { ModalAddBookComponent } from './pages/modals/modal-add-book/modal-add-book.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
     HomeComponent,
     HeaderComponent,
     MenuBarComponent,
+    ModalAddBookComponent,
   ],
   imports: [
     BrowserModule,

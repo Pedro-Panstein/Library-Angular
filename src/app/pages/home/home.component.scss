@@ -115,6 +115,16 @@ main {
   }
 }
 
+@media screen and (max-width: 362px) {
+  main {
+    .title-and-filter {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 330px) {
   main {
     .title-and-filter {
