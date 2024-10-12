@@ -1,5 +1,24 @@
+<input class="hidden" type="file" id="file" accept="image/png, image/jpeg" (change)="onFileSelected($event)" />
+
 <section>
-    <span class="material-symbols-outlined">
-        close
-        </span>
+  <div class="title-and-close">
+    <h2>Add Book</h2>
+    <span (click)="closeModal()" class="material-symbols-outlined">
+      close
+    </span>
+  </div>
+  <div class="upload-image-content">
+    <h4>Cover Image</h4>
+    <div class="upload-image"
+         (click)="uploadFile()"
+         (dragover)="onDragOver($event)"
+         (dragleave)="onDragLeave($event)"
+         (drop)="onDrop($event)">
+      <img id="image" src="../../../../assets/imagem upload.png" />
+      <div class="drag-select">
+        <p>Drag or select an image</p>
+        <span id="upload" class="material-symbols-outlined">upload</span>
+      </div>
+    </div>
+  </div>
 </section>
