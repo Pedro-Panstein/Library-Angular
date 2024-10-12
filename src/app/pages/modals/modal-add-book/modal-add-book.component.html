@@ -21,4 +21,8 @@
       </div>
     </div>
   </div>
+  <div class="book-informations">
+    <label for="book-name">Titulo</label>
+    <input type="text" id="book-name" [(ngModel)]="bookName" (keydown.enter)="nameTitle()" placeholder="Name of your book">
+  </div>
 </section>

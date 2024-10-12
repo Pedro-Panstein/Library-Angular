@@ -7,8 +7,12 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./modal-add-book.component.scss']
 })
 export class ModalAddBookComponent {
+
+  bookName: String = '';
+
   constructor(public dialogRef: MatDialogRef<ModalAddBookComponent>) {}
 
+  //Image input
   uploadFile() {
     const inputFile = document.getElementById('file') as HTMLElement;
     inputFile?.click();
@@ -65,6 +69,11 @@ export class ModalAddBookComponent {
   resetDragStyles() {
     const uploadArea = document.querySelector('.upload-image') as HTMLElement;
     uploadArea.classList.remove('dragging');
+  }
+
+  //Titule input
+  nameTitle() {
+    console.log(this.bookName);
   }
 
   closeModal() {
