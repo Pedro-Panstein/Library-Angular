@@ -72,9 +72,7 @@ export class ModalAddBookComponent {
   }
 
   //Titule input
-  nameTitle() {
-    console.log(this.bookName);
-  }
+  
 
   closeModal() {
     this.dialogRef.close();
