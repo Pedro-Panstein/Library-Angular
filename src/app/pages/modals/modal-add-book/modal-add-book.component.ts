@@ -4,11 +4,14 @@ import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-modal-add-book',
   templateUrl: './modal-add-book.component.html',
-  styleUrls: ['./modal-add-book.component.scss']
+  styleUrls: ['./modal-add-book.component.scss'],
 })
 export class ModalAddBookComponent {
-
   bookName: String = '';
+  authorName: String = '';
+  bookYear: String = '';
+  bookIndication: String = '';
+  bookDescription: String = '';
 
   constructor(public dialogRef: MatDialogRef<ModalAddBookComponent>) {}
 
@@ -72,7 +75,6 @@ export class ModalAddBookComponent {
   }
 
   //Titule input
-  
 
   closeModal() {
     this.dialogRef.close();

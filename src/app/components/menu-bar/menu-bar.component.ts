@@ -19,7 +19,7 @@ export class MenuBarComponent {
 
   openModalAddBook() {
     this.dialog.open(ModalAddBookComponent, {
-      height: '80%',
+      height: '90%',
       width: '800px',
     });
   }

@@ -69,6 +69,66 @@ span {
   user-select: none;
 }
 
-.book-informations {
-  //voltar depois
+.book-informations, .year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  h4 {
+    font-size: 1.5rem;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+  label {
+    font-size: 1.5rem;
+    color: var(--blue);
+  }
+  input, select {
+    margin-top: 10px;
+    outline: none;
+    color: var(--blue);
+    font-size: var(--font-size);
+    font-weight: 500;
+    padding: 18px 18px;
+    width: 450px;
+    border-radius: var(--radio);
+    border: 2px solid var(--gray);
+    box-shadow: inset 0px 0px 5px var(--gray);
+    background-color: transparent;
+    transition: 0.2s linear all;
+    &:focus {
+      box-shadow: inset 0px 0px 2px var(--blue);
+    }
+    &::placeholder {
+      color: var(--gray);
+    }
+  }
+}
+
+.year {
+  input {
+    width: 200px;
+    color: var(--blue);
+  }
+}
+
+.year-all-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 23px;
+  select {
+    background-color: transparent;
+    color: var(--gray);
+    font-size: var(--font-size);
+    width: 83px;
+    cursor: pointer;
+    outline: none;
+    padding: 18px 0px 18px 10px;
+    margin: 0;
+  }
+}
+
+#description {
+  height:50px;
 }
