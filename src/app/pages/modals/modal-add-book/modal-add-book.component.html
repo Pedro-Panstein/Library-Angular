@@ -35,7 +35,7 @@
       <div class="year-all-content">
         <input type="date" id="year" [(ngModel)]="bookYear" placeholder="mm/dd/yyyy">
       <label for="year">Indication</label>
-      <select name="Indication" id="indication">
+      <select [(ngModel)]="bookIndication" name="Indication" id="indication">
         <option selected value="G">G</option>
         <option value="PG">PG</option>
         <option value="PG-13">PG-13</option>
@@ -47,6 +47,7 @@
   </div>
   <div class="book-informations">
     <label for="author">Description</label>
-    <input type="text" id="description" [(ngModel)]="authorName" placeholder="Add a description">
+    <textarea name="textarea-description" id="description" [(ngModel)]="bookDescription"></textarea>
   </div>
+  <button (click)="sla()">Add</button>
 </section>

@@ -1,7 +1,6 @@
 section {
   background-color: var(--white);
-  height: 100%;
-  padding: 40px;
+  padding: 40px 40px 0px 40px;
   .title-and-close {
     display: flex;
     justify-content: space-between;
@@ -131,4 +130,5 @@ span {
 
 #description {
   height:50px;
+  background-color: var(--white);
 }

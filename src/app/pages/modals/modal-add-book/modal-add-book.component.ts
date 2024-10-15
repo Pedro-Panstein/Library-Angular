@@ -75,7 +75,14 @@ export class ModalAddBookComponent {
   }
 
   //Titule input
-
+  sla() {
+    console.log(this.bookName);
+    console.log(this.authorName);
+    console.log(this.bookYear);
+    console.log(this.bookIndication);
+    console.log(this.bookDescription);
+  }
+ 
   closeModal() {
     this.dialogRef.close();
   }
