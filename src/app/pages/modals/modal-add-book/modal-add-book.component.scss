@@ -1,7 +1,8 @@
 section {
   background-color: var(--white);
   padding: 40px 40px 0px 40px;
-  min-height: 90vh;
+  min-height: 100vh;
+  max-height: 100%;
   .title-and-close {
     display: flex;
     justify-content: space-between;
@@ -83,7 +84,7 @@ span {
     font-size: 1.5rem;
     color: var(--blue);
   }
-  input, select {
+  input, select, textarea {
     margin-top: 10px;
     outline: none;
     color: var(--blue);
@@ -132,4 +133,16 @@ span {
 #description {
   height:50px;
   background-color: var(--white);
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+app-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }

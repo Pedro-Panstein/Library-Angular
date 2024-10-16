@@ -27,7 +27,7 @@
   </div>
   <div class="book-informations">
     <label for="author">Author</label>
-    <input type="text" id="author-name" [(ngModel)]="authorName" placeholder="Name of your book">
+    <input type="text" id="author-name" [(ngModel)]="authorName" placeholder="Author's name">
   </div>
   <div class="year-indication">
     <div class="year">
@@ -47,7 +47,7 @@
   </div>
   <div class="book-informations">
     <label for="author">Description</label>
-    <textarea name="textarea-description" id="description" [(ngModel)]="bookDescription"></textarea>
+    <textarea name="textarea-description" id="description" [(ngModel)]="bookDescription" placeholder="Add a description"></textarea>
   </div>
-  <button (click)="sla()">Add</button>
+  <app-button textButton="Add" (click)="addBook()">Add</app-button>
 </section>

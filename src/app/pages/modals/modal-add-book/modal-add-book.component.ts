@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { SharedService } from '../../../shared.service';
 
 @Component({
   selector: 'app-modal-add-book',
@@ -7,13 +8,17 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./modal-add-book.component.scss'],
 })
 export class ModalAddBookComponent {
-  bookName: String = '';
-  authorName: String = '';
-  bookYear: String = '';
-  bookIndication: String = '';
-  bookDescription: String = '';
+  bookName: string = '';
+  authorName: string = '';
+  bookYear: string = '';
+  bookIndication: string = '';
+  bookDescription: string = '';
+  imageUrl: string = '';
 
-  constructor(public dialogRef: MatDialogRef<ModalAddBookComponent>) {}
+  constructor(
+    public dialogRef: MatDialogRef<ModalAddBookComponent>,
+    private sharedService: SharedService,
+  ) {}
 
   //Image input
   uploadFile() {
@@ -63,6 +68,7 @@ export class ModalAddBookComponent {
       const imageElement = document.getElementById('image') as HTMLImageElement;
       imageElement.src = e.target.result;
       imageElement.style.marginRight = '15px';
+      this.imageUrl = e.target.result;
     };
 
     reader.readAsDataURL(file);
@@ -75,12 +81,35 @@ export class ModalAddBookComponent {
   }
 
   //Titule input
-  sla() {
-    console.log(this.bookName);
-    console.log(this.authorName);
-    console.log(this.bookYear);
-    console.log(this.bookIndication);
-    console.log(this.bookDescription);
+  addBook() {
+    this.createBook(this.imageUrl, this.bookName, this.authorName, this.bookYear, this.bookIndication, this.bookDescription)
+  }
+
+  createBook(image: string, title: string, author: string, year: string, indication: string, description: string) {
+    const article = document.createElement("article");
+    const img = document.createElement("img");
+    const h3 = document.createElement("h3");
+    const p = document.createElement("p");
+    const booksContent = document.querySelector(".books-content") as HTMLElement;
+
+    const book = {image, title, author, year, indication, description}
+    this.sharedService.addBook(book);
+
+    img.src = image;
+    h3.textContent = title;
+    p.textContent = description;
+    article.classList.add("book");
+
+    booksContent.appendChild(article);
+    article.appendChild(img);
+    article.appendChild(h3);
+    article.appendChild(p);
+
+    let booksArray = []
+
+    booksArray.push(article);
+
+    
   }
  
   closeModal() {
