@@ -12,14 +12,14 @@ export class LoginComponent {
   constructor(private rota: Router) {}
 
   login() {
-    const regex = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~°ªº§¢£¬¨´´®¥©×÷±]/;
+    const regex = /[a-zA-Z]/;
     this.defaultErrorMessage();
 
     if (this.userName == null || this.userName == '') {
       this.error();
     } else if (this.userName.length > 35) {
       this.characterLimit();
-    } else if (regex.test(this.userName)) {
+    } else if (!regex.test(this.userName)) {
       this.error();
     } else if (this.userName.length <= 2) {
       this.minimumCharacter();
