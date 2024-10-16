@@ -15,6 +15,7 @@ export class HeaderComponent {
     this.dialog.open(ModalAddBookComponent, {
       height: '90%',
       width: '800px',
+      maxHeight: '1000px',
     })
   }
 
