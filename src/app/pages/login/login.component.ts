@@ -24,7 +24,7 @@ export class LoginComponent {
     } else if (this.userName.length <= 2) {
       this.minimumCharacter();
     } else {
-      sessionStorage.setItem('user', this.userName);
+      localStorage.setItem('user', this.userName);
       this.rota.navigate(['home']);
     }
   }

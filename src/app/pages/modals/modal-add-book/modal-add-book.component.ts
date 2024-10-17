@@ -82,7 +82,8 @@ export class ModalAddBookComponent {
 
   //Titule input
   addBook() {
-    this.createBook(this.imageUrl, this.bookName, this.authorName, this.bookYear, this.bookIndication, this.bookDescription)
+    this.createBook(this.imageUrl, this.bookName, this.authorName, this.bookYear, this.bookIndication, this.bookDescription);
+    this.closeModal();
   }
 
   createBook(image: string, title: string, author: string, year: string, indication: string, description: string) {
