@@ -8,7 +8,7 @@
     <div class="login">
         <label for="username">Enter your name</label>
         <div class="input-container">
-          <input [(ngModel)]="userName" (keydown.enter)="login()" type="text" id="input-username" placeholder="Your name">
+          <input [(ngModel)]="userName" (keydown.enter)="login()" type="text" autocomplete="off" id="input-username" placeholder="Your name">
         <img src="../../../assets/arrow-login.png" (click)="login()" alt="Login">
         </div>
         <div class="error-message hidden">

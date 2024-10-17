@@ -86,30 +86,10 @@ export class ModalAddBookComponent {
   }
 
   createBook(image: string, title: string, author: string, year: string, indication: string, description: string) {
-    const article = document.createElement("article");
-    const img = document.createElement("img");
-    const h3 = document.createElement("h3");
-    const p = document.createElement("p");
     const booksContent = document.querySelector(".books-content") as HTMLElement;
 
     const book = {image, title, author, year, indication, description}
     this.sharedService.addBook(book);
-
-    img.src = image;
-    h3.textContent = title;
-    p.textContent = description;
-    article.classList.add("book");
-
-    booksContent.appendChild(article);
-    article.appendChild(img);
-    article.appendChild(h3);
-    article.appendChild(p);
-
-    let booksArray = []
-
-    booksArray.push(article);
-
-    
   }
  
   closeModal() {
