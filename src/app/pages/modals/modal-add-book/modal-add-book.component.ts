@@ -82,6 +82,10 @@ export class ModalAddBookComponent {
 
   //Titule input
   addBook() {
+    if (this.imageUrl == "" || this.bookName == "" || this.authorName  == "" || this.bookYear == "" || this.bookIndication == "" || this.bookDescription == "") {
+      alert("digite um valor no input")
+      return;
+    }
     this.createBook(this.imageUrl, this.bookName, this.authorName, this.bookYear, this.bookIndication, this.bookDescription);
     this.closeModal();
   }

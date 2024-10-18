@@ -10,9 +10,38 @@
     </div>
   </section>
   <section class="books-content">
+    <article class="book">
+      <img src="../../../assets/image-test.png" alt="capa do livro" />
+      <h3>Title: <span>Senhor dos anéis</span></h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem
+        exercitationem totam, iure itaque deleniti ratione aperiam corporis,
+        odit molestias sed vero incidunt ea ducimus.
+      </p>
+    </article>
+    <article class="book">
+      <img src="../../../assets/image-test.png" alt="capa do livro" />
+      <h3>Title: <span>Senhor dos anéis</span></h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem
+        exercitationem totam, iure itaque deleniti ratione aperiam corporis,
+        odit molestias sed vero incidunt ea ducimus.
+      </p>
+    </article>
+    <article class="book">
+      <img src="../../../assets/image-test.png" alt="capa do livro" />
+      <h3>Title: <span>Senhor dos anéis</span></h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi autem
+        exercitationem totam, iure itaque deleniti ratione aperiam corporis,
+        odit molestias sed vero incidunt ea ducimus.
+      </p>
+    </article>
     <article *ngFor="let book of booksArray" class="book">
-      <img [src]="book.image" alt="Capa do livro">
-      <h3>Title: <span>{{ book.title }}</span></h3>
+      <img [src]="book.image" alt="Capa do livro" />
+      <h3>
+        Title: <span>{{ book.title }}</span>
+      </h3>
       <p>{{ book.description }}</p>
     </article>
   </section>
