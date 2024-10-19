@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { SharedService } from '../../../shared.service';
 
@@ -6,6 +6,7 @@ import { SharedService } from '../../../shared.service';
   selector: 'app-modal-add-book',
   templateUrl: './modal-add-book.component.html',
   styleUrls: ['./modal-add-book.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ModalAddBookComponent {
   bookName: string = '';

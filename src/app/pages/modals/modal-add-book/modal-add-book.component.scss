@@ -144,13 +144,13 @@ app-button {
 }
 
 #uploadImage {
-  color: var(--gray);
+  color: var(--blue);
   border-color: var(--gray);
 }
 
 #titleContent {
   input {
-    color: var(--gray);
+    color: var(--blue);
     border-color: var(--gray);
     &::placeholder {
       color: var(--gray);
@@ -160,7 +160,7 @@ app-button {
 
 #authorContent {
   input {
-    color: var(--gray);
+    color: var(--blue);
     border-color: var(--gray);
     &::placeholder {
       color: var(--gray);
@@ -171,7 +171,7 @@ app-button {
 .year {
   input {
     width: 200px;
-    color: var(--gray);
+    color: var(--blue);
     border-color: var(--gray);
     &::placeholder {
       color: var(--gray);
@@ -180,7 +180,7 @@ app-button {
 }
 
 #indicationContent {
-  color: var(--gray);
+  color: var(--blue);
   border-color: var(--gray);
   &::placeholder {
     color: var(--gray);
@@ -189,7 +189,7 @@ app-button {
 
 #descriptionContent {
   textarea {
-    color: var(--gray);
+    color: var(--blue);
     border-color: var(--gray);
     &::placeholder {
       color: var(--gray);
