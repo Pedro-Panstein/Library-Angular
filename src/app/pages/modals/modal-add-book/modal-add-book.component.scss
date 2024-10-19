@@ -70,7 +70,8 @@ span {
   user-select: none;
 }
 
-.book-informations, .year {
+.book-informations,
+.year {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +85,9 @@ span {
     font-size: 1.5rem;
     color: var(--blue);
   }
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     margin-top: 10px;
     outline: none;
     color: var(--blue);
@@ -106,13 +109,6 @@ span {
   }
 }
 
-.year {
-  input {
-    width: 200px;
-    color: var(--blue);
-  }
-}
-
 .year-all-content {
   display: flex;
   justify-content: space-around;
@@ -131,7 +127,7 @@ span {
 }
 
 #description {
-  height:50px;
+  height: 50px;
   background-color: var(--white);
 }
 
@@ -145,4 +141,58 @@ app-button {
   justify-content: center;
   align-items: center;
   height: 100px;
+}
+
+#uploadImage {
+  color: var(--gray);
+  border-color: var(--gray);
+}
+
+#titleContent {
+  input {
+    color: var(--gray);
+    border-color: var(--gray);
+    &::placeholder {
+      color: var(--gray);
+    }
+  }
+}
+
+#authorContent {
+  input {
+    color: var(--gray);
+    border-color: var(--gray);
+    &::placeholder {
+      color: var(--gray);
+    }
+  }
+}
+
+.year {
+  input {
+    width: 200px;
+    color: var(--gray);
+    border-color: var(--gray);
+    &::placeholder {
+      color: var(--gray);
+    }
+  }
+}
+
+#indicationContent {
+  color: var(--gray);
+  border-color: var(--gray);
+  &::placeholder {
+    color: var(--gray);
+  }
+}
+
+#descriptionContent {
+  textarea {
+    color: var(--gray);
+    border-color: var(--gray);
+    &::placeholder {
+      color: var(--gray);
+    }
+  }
 }

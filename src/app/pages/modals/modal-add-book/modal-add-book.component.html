@@ -1,4 +1,4 @@
-<input class="hidden" type="file" id="file" accept="image/png, image/jpeg" (change)="onFileSelected($event)" />
+<input autocomplete="off" class="hidden" type="file" id="file" accept="image/png, image/jpeg" (change)="onFileSelected($event)" />
 
 <section>
   <div class="title-and-close">
@@ -9,7 +9,7 @@
   </div>
   <div class="upload-image-content">
     <h4>Cover Image</h4>
-    <div class="upload-image"
+    <div id="uploadImage" class="upload-image"
          (click)="uploadFile()"
          (dragover)="onDragOver($event)"
          (dragleave)="onDragLeave($event)"
@@ -21,21 +21,21 @@
       </div>
     </div>
   </div>
-  <div class="book-informations">
+  <div id="titleContent" class="book-informations">
     <label for="book-name">Titulo</label>
-    <input type="text" id="book-name" [(ngModel)]="bookName" placeholder="Name of your book">
+    <input autocomplete="off" type="text" id="book-name" [(ngModel)]="bookName" placeholder="Name of your book">
   </div>
-  <div class="book-informations">
+  <div id="authorContent" class="book-informations">
     <label for="author">Author</label>
-    <input type="text" id="author-name" [(ngModel)]="authorName" placeholder="Author's name">
+    <input autocomplete="off" type="text" id="author-name" [(ngModel)]="authorName" placeholder="Author's name">
   </div>
   <div class="year-indication">
     <div class="year">
       <label for="year">Year</label>
       <div class="year-all-content">
-        <input type="date" id="year" [(ngModel)]="bookYear" placeholder="mm/dd/yyyy">
+        <input autocomplete="off" type="date" id="year" [(ngModel)]="bookYear" placeholder="mm/dd/yyyy">
       <label for="year">Indication</label>
-      <select [(ngModel)]="bookIndication" name="Indication" id="indication">
+      <select id="indicationContent" [(ngModel)]="bookIndication" name="Indication">
         <option selected value="G">G</option>
         <option value="PG">PG</option>
         <option value="PG-13">PG-13</option>
@@ -45,9 +45,9 @@
       </div>
     </div>
   </div>
-  <div class="book-informations">
+  <div id="descriptionContent" class="book-informations">
     <label for="author">Description</label>
-    <textarea name="textarea-description" id="description" [(ngModel)]="bookDescription" placeholder="Add a description"></textarea>
+    <textarea autocomplete="off" name="textarea-description" id="description" [(ngModel)]="bookDescription" placeholder="Add a description"></textarea>
   </div>
   <app-button textButton="Add" (click)="addBook()">Add</app-button>
 </section>

@@ -82,19 +82,59 @@ export class ModalAddBookComponent {
 
   //Titule input
   addBook() {
-    if (this.imageUrl == "" || this.bookName == "" || this.authorName  == "" || this.bookYear == "" || this.bookIndication == "" || this.bookDescription == "") {
-      alert("digite um valor no input")
-      return;
+    const fields = [
+      { value: this.imageUrl, element: document.querySelector('#uploadImage') as HTMLElement },
+      { value: this.bookName, element: document.querySelector('#titleContent input') as HTMLElement },
+      { value: this.authorName, element: document.querySelector('#authorContent input') as HTMLElement },
+      { value: this.bookYear, element: document.querySelector('.year input') as HTMLElement },
+      { value: this.bookIndication, element: document.querySelector('#indicationContent') as HTMLElement },
+      { value: this.bookDescription, element: document.querySelector('#descriptionContent textarea') as HTMLElement }
+    ];
+  
+    let changeArrayElements: any = [];
+    let resetArrayElements: any = [];
+  
+    // Verifica cada campo e adiciona à lista de erros, se necessário
+    fields.forEach(field => {
+      if (!field.value) {
+        changeArrayElements.push(field.element);
+        resetArrayElements.push(field.element);
+      }
+    });
+  
+    if (changeArrayElements.length > 0) {
+      this.changeStyles(changeArrayElements);
+  
+      setTimeout(() => {
+        this.resetStyles(resetArrayElements);
+      }, 3000);
+  
+      return; // Impede a criação do livro se houver erros
     }
+  
+    // Cria o livro se não houver erros
     this.createBook(this.imageUrl, this.bookName, this.authorName, this.bookYear, this.bookIndication, this.bookDescription);
     this.closeModal();
   }
+  
 
   createBook(image: string, title: string, author: string, year: string, indication: string, description: string) {
-    const booksContent = document.querySelector(".books-content") as HTMLElement;
-
     const book = {image, title, author, year, indication, description}
     this.sharedService.addBook(book);
+  }
+
+  changeStyles(changeArrayElements: []) {
+    changeArrayElements.forEach((e: HTMLElement) => {
+      e.style.color = "var(--red)";
+      e.style.borderColor = "var(--red)";
+    })
+  }
+
+  resetStyles(resetArrayEelements: []) {
+    resetArrayEelements.forEach((e: HTMLElement) => {
+      e.style.color = "var(--blue)"
+      e.style.borderColor = "var(--gray)"
+    })
   }
  
   closeModal() {
