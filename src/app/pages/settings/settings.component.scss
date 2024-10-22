@@ -2,9 +2,10 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    gap: 30px;
     flex-direction: column;
-    margin-top: 3rem;
-    .profile-content {
+    margin: 3rem 2rem 0rem 2rem;
+    .profile-content, .appearance-content {
         display: flex;
         align-items: center;
         padding: 20px;
@@ -27,6 +28,26 @@
         img {
             position: absolute;
             left: 20px;
+        }
+    }
+    .appearance-content {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+            width: auto;
+            padding: 0;
+        }
+        select {
+            border: none;
+            overflow: none;
+            border-radius: var(--radio);
+            background-color: var(--select-color);
+            color: var(--white);
+            padding: 10px 20px;
+            font-size: var(--font-size);
         }
     }
 }
