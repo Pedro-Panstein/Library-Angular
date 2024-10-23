@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrl: './settings.component.scss'
+  styleUrls: ['./settings.component.scss'],
 })
 export class SettingsComponent implements OnInit {
   nameAccount: string = '';
 
-  constructor() {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    const nameAccount = document.getElementById("nameAccount") as HTMLElement;
-      nameAccount.textContent = localStorage.getItem('user') ?? '';
+    if (typeof window != 'undefined') {
+      const nameAccountElement = document.getElementById('nameAccount') as HTMLElement;
+      if (nameAccountElement) {
+        const username = localStorage.getItem('user') ?? '';
+        this.renderer.setProperty(nameAccountElement, 'textContent', username);
+      }
+    }
   }
 }

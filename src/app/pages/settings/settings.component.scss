@@ -72,8 +72,18 @@
     margin-right: 20px;
     cursor: pointer;
     transition: .5s ease-in-out;
+    transform: rotate(10deg);
     &:hover {
-        transform: rotate(360deg);
+        animation: editAnimation 3s ease-in-out infinite;
     }
 }
 
+@keyframes editAnimation {
+    0% {
+        transform: rotate(10deg);
+    } 50% {
+        transform: rotate(-10deg);
+    } 100% {
+        transform: rotate(10deg);
+    }
+}
