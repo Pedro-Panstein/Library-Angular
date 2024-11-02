@@ -13,6 +13,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 //Angular material
 import { MatIconModule } from '@angular/material/icon';
 import { ModalAddBookComponent } from './pages/modals/modal-add-book/modal-add-book.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ModalAddBookComponent } from './pages/modals/modal-add-book/modal-add-b
     HeaderComponent,
     MenuBarComponent,
     ModalAddBookComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
